@@ -1,0 +1,198 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Encurtador de URL",
+    "collectionId": "90e65f21-3372-4389-998b-c0c954d9fb4f",
+    "dateExported": "2024-11-02T09:49:53.052Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "d49127b5-375d-480f-b00f-c77d75ae9a3a",
+            "name": "URL",
+            "containerId": "",
+            "created": "2024-11-02T08:38:03.540Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "a44a7f42-3463-44a2-abdd-3c8ca3bc0311",
+            "name": "User",
+            "containerId": "",
+            "created": "2024-11-02T08:38:13.624Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "f43d85c5-51e5-4e2d-a6d3-d06d1d1e7da4",
+            "name": "Auth",
+            "containerId": "",
+            "created": "2024-11-02T08:46:23.952Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "d364c943-564d-463d-bc17-3a0133f18d6b",
+            "colId": "90e65f21-3372-4389-998b-c0c954d9fb4f",
+            "containerId": "d49127b5-375d-480f-b00f-c77d75ae9a3a",
+            "name": "Shorten URL",
+            "url": "http://localhost:4000/v1/shorten",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-11-02T06:32:21.871Z",
+            "modified": "2024-11-02T09:09:23.382Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiZW1haWwiOiJhbGFuQHRlc3RlLmNvbSJ9.YhglT4uflCeXCmfEi1OO9YqmmyMNYw0G_IclpqT1Ng0"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"originalUrl\": \"https://docs.google.com/\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "cb5577fe-0cce-4d3e-a86e-2a047569c6de",
+            "colId": "90e65f21-3372-4389-998b-c0c954d9fb4f",
+            "containerId": "d49127b5-375d-480f-b00f-c77d75ae9a3a",
+            "name": "Restore Original URL",
+            "url": "http://localhost:4000/v1/EnIOgs",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-11-02T06:33:17.270Z",
+            "modified": "2024-11-02T08:18:29.008Z",
+            "headers": []
+        },
+        {
+            "_id": "8260280d-272a-49ca-af61-139bc6e40df8",
+            "colId": "90e65f21-3372-4389-998b-c0c954d9fb4f",
+            "containerId": "a44a7f42-3463-44a2-abdd-3c8ca3bc0311",
+            "name": "List Users",
+            "url": "http://localhost:4000/v1/src/user",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-11-02T08:38:25.352Z",
+            "modified": "2024-11-02T08:41:22.273Z",
+            "headers": []
+        },
+        {
+            "_id": "469cbaf9-e4d7-49b9-b75b-9a7bffe508e8",
+            "colId": "90e65f21-3372-4389-998b-c0c954d9fb4f",
+            "containerId": "a44a7f42-3463-44a2-abdd-3c8ca3bc0311",
+            "name": "Create User",
+            "url": "http://localhost:4000/v1/src/user",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-11-02T08:41:44.033Z",
+            "modified": "2024-11-02T08:45:16.132Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"alan@teste.com\",\n  \"password\":\"123456\",\n  \"confirm_password\": \"123456\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "80cd64d1-ea64-4899-892a-b7349eb31e2d",
+            "colId": "90e65f21-3372-4389-998b-c0c954d9fb4f",
+            "containerId": "a44a7f42-3463-44a2-abdd-3c8ca3bc0311",
+            "name": "Get User By Id",
+            "url": "http://localhost:4000/v1/src/user/1",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-11-02T08:45:39.646Z",
+            "modified": "2024-11-02T08:49:49.955Z",
+            "headers": []
+        },
+        {
+            "_id": "68394ff6-d65f-4fc7-8a31-bfd075f7456c",
+            "colId": "90e65f21-3372-4389-998b-c0c954d9fb4f",
+            "containerId": "f43d85c5-51e5-4e2d-a6d3-d06d1d1e7da4",
+            "name": "Login",
+            "url": "http://localhost:4000/v1/src/auth/login",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-11-02T08:50:33.695Z",
+            "modified": "2024-11-02T08:51:19.114Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"alan@teste.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "63eb95a8-5455-4889-8082-c8bba64633b7",
+            "colId": "90e65f21-3372-4389-998b-c0c954d9fb4f",
+            "containerId": "d49127b5-375d-480f-b00f-c77d75ae9a3a",
+            "name": "List URLs",
+            "url": "http://localhost:4000/v1/url/list",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-11-02T09:08:21.006Z",
+            "modified": "2024-11-02T09:12:22.975Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiZW1haWwiOiJhbGFuQHRlc3RlLmNvbSJ9.YhglT4uflCeXCmfEi1OO9YqmmyMNYw0G_IclpqT1Ng0"
+                }
+            ]
+        },
+        {
+            "_id": "19415b00-ff34-4133-9a03-144b5a0f27b4",
+            "colId": "90e65f21-3372-4389-998b-c0c954d9fb4f",
+            "containerId": "d49127b5-375d-480f-b00f-c77d75ae9a3a",
+            "name": "Get URL By ID",
+            "url": "http://localhost:4000/v1/url/4",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-11-02T09:16:44.596Z",
+            "modified": "2024-11-02T09:28:42.477Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiZW1haWwiOiJhbGFuQHRlc3RlLmNvbSJ9.YhglT4uflCeXCmfEi1OO9YqmmyMNYw0G_IclpqT1Ng0"
+                }
+            ]
+        },
+        {
+            "_id": "1e230398-f7ae-4bd6-a623-e13710f3ab79",
+            "colId": "90e65f21-3372-4389-998b-c0c954d9fb4f",
+            "containerId": "d49127b5-375d-480f-b00f-c77d75ae9a3a",
+            "name": "Edit URL By ID",
+            "url": "http://localhost:4000/v1/url/3",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2024-11-02T09:36:23.516Z",
+            "modified": "2024-11-02T09:37:48.887Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiZW1haWwiOiJhbGFuQHRlc3RlLmNvbSJ9.YhglT4uflCeXCmfEi1OO9YqmmyMNYw0G_IclpqT1Ng0"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"originalUrl\": \"https://www.amazon.com.br/\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "d5d4ea76-8cee-43e7-ac11-51baabec1ab5",
+            "colId": "90e65f21-3372-4389-998b-c0c954d9fb4f",
+            "containerId": "d49127b5-375d-480f-b00f-c77d75ae9a3a",
+            "name": "Delete URL By ID",
+            "url": "http://localhost:4000/v1/url/3",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2024-11-02T09:38:38.547Z",
+            "modified": "2024-11-02T09:42:13.164Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiZW1haWwiOiJhbGFuQHRlc3RlLmNvbSJ9.YhglT4uflCeXCmfEi1OO9YqmmyMNYw0G_IclpqT1Ng0"
+                }
+            ]
+        }
+    ],
+    "ref": "rtEAkZa_a7X-meYTsxfCl9ULO_Etb6XJooZ_D1SanQ-335iszAYFUuN8emWUJVCICF19ehNz5csqVH3eFOJrEA"
+}
