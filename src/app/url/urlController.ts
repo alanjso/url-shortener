@@ -10,7 +10,6 @@ interface AuthRequest extends Request {
     user?: UserModel | null;
 }
 
-
 export default {
     shortenUrl: async (req: AuthRequest, res: Response): Promise<any> => {
         const { originalUrl } = req.body;

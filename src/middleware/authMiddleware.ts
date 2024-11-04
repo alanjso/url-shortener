@@ -14,7 +14,7 @@ const authMiddleware = async (req: AuthRequest, res: Response, next: NextFunctio
         if (token) {
             const verifiedToken = jwt.verify(token, 'HS256', JWT_SECRET);
             if (verifiedToken) {
-                const decoded = await jwt.decode(token);
+                const decoded = jwt.decode(token);
                 const id = decoded ? JSON.parse(decoded.payload).id : null;
                 const user = await UserModel.findByPk(id);
                 if (!user) return res.status(401).json({ error: 'User not found' });
