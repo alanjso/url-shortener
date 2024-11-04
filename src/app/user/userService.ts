@@ -1,4 +1,3 @@
-// src/services/userService.ts
 import UserModel from './userModel';
 import bcrypt from 'bcrypt';
 
@@ -10,6 +9,10 @@ class UserService {
 
     async getUserById(id: number): Promise<UserModel | null> {
         return await UserModel.findByPk(id);
+    }
+
+    async getUserByEmail(email: string): Promise<UserModel | null> {
+        return await UserModel.findOne({ where: { email } });
     }
 
     async getAllUsers(): Promise<{ rows: UserModel[]; count: number; }> {
